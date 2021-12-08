@@ -1,3 +1,4 @@
+/* margin, padding sbhi html element per lg jayega */
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +12,8 @@
   background-size: cover;
   position: relative;
 }
+
+/* icon hidden for larger screen */
 nav .fa {
   display: none;
 }
@@ -25,20 +28,20 @@ nav .fa {
   }
   div.nav-links {
     /* nav bar fixed ke liye */
-    position: fixed;
+    position: fixed; /*position: absolute; */
     background: #f44336;
     height: 100vh;
     width: 200px;
     top: 0;
     /* hide menu bar */
     /* right:0 krenge tohmenu bar show hoga mobile screen per jumne yha -200likha h hide krne ke liye */
-    right: -200px;
+    right: -200px; /*menu is hidden  */
     text-align: left;
     z-index: 2;
     transition: 1s;
   }
   nav .fa {
-    display: block;
+    display: block; /* awesom icons visible here for small screen*/
     color: #fff;
     margin: 10px;
     font-size: 22px;
@@ -49,8 +52,9 @@ nav .fa {
     padding: 30px;
   }
 }
-
+/* for navbar ul li */
 nav {
+  z-index: 1;
   display: flex;
   padding: 2% 6%;
   justify-content: space-between;
@@ -63,13 +67,13 @@ nav img {
   width: 150px;
 }
 .nav-links {
-  flex: 1;
+  flex: 1; /*it will ocuppy space in the row */
   text-align: right;
 }
 .nav-links ul li {
   /* list se dotes remove ke liye */
   list-style: none;
-  display: inline-block;
+  display: inline-block; /*horizontely*/
   padding: 8px 12px;
   position: relative;
 }
@@ -81,15 +85,15 @@ nav img {
 /* red line dene ke liye */
 .nav-links ul li ::after {
   content: "";
-  width: 0%;
-  height: 2px;
+  width: 0%; /* red line hidden   */
+  height: 2px; /* red line ki  */
   background: #f44336;
   display: block;
   margin: auto;
   transition: 0.5s;
 }
 .nav-links ul li :hover::after {
-  width: 100%;
+  width: 100%; /*nav links per jaise hi cursor lekr jaugi hover se line aajayegi niche*/
 }
 .text-box {
   width: 90%;
@@ -316,11 +320,11 @@ h3 {
   margin-bottom: 40px;
   padding: 0;
 }
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .cta {
     width: 24px;
   }
-}
+} */
 /* footer */
 .footer {
   width: 100%;
